@@ -2,7 +2,7 @@
 
 # WeatherME app
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)
+[![GitHub last commit](https://img.shields.io/github/last-commit/faelribeiro22/weather-app)](https://img.shields.io/github/last-commit/faelribeiro22/weather-app)
 
 App Desenvolvido para o teste prático. Foi útlilizado este [figma](<https://www.figma.com/design/LDjr50IDhY2EgBQPvdykW2/WeatherMe-Website-(Community)?node-id=2-2&t=pFlNmJJEEVW3MXqz-0>) como exemplo
 
