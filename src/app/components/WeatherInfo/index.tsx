@@ -3,15 +3,12 @@ import CityDetailsWeather from '../CityDetailsWeather'
 import Logo from '../Logo'
 import NextDaysWeather from '../NextDaysWeather'
 import Search from '../Search'
-import { getCityWeatherCordsRequest } from '@/http/api'
 
 async function WeatherInfo({
-  coord,
   name,
   weather,
   wind,
   main,
-  sys,
   visibility
 }: WeatherData) {
   const date = new Date()
