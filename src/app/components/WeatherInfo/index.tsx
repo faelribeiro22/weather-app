@@ -1,8 +1,8 @@
 import { WeatherData } from '@/types/types'
 import CityDetailsWeather from '../CityDetailsWeather'
 import Logo from '../Logo'
-import NextDaysWeather from '../NextDaysWeather'
 import Search from '../Search'
+import Link from 'next/link'
 
 async function WeatherInfo({
   name,
@@ -20,18 +20,19 @@ async function WeatherInfo({
       <form method="get" action="/">
         <Search />
       </form>
-      <CityDetailsWeather
-        location={name}
-        description={weather[0].description}
-        date={dateFormat}
-        temperature="27°C"
-        humidity={`${main.humidity}%`}
-        visibility={`${visibility / 1000}km`}
-        airPressure={`${main.pressure}hPa`}
-        windSpeed={`${wind.speed}mph`}
-        icon={weather[0].icon}
-      />
-      <NextDaysWeather />
+      <Link href={`/cidade/${name}`}>
+        <CityDetailsWeather
+          location={name}
+          description={weather[0].description}
+          date={dateFormat}
+          temperature={`${main.temp.toFixed(0)}°C`}
+          humidity={`${main.humidity}%`}
+          visibility={`${visibility / 1000}km`}
+          airPressure={`${main.pressure}hPa`}
+          windSpeed={`${wind.speed}mph`}
+          icon={weather[0].icon}
+        />
+      </Link>
     </div>
   )
 }

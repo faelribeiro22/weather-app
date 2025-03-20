@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Weather app logo](https://github.com/faelribeiro22/weather-app/raw/main/src/assets/logo.png)
 
-## Getting Started
+# WeatherME app
 
-First, run the development server:
+[![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)
 
-```bash
+App Desenvolvido para o teste prático. Foi útlilizado este [figma](<https://www.figma.com/design/LDjr50IDhY2EgBQPvdykW2/WeatherMe-Website-(Community)?node-id=2-2&t=pFlNmJJEEVW3MXqz-0>) como exemplo
+
+# Quick Start Demo
+
+O app tá hospedado na vercel neste [link](https://weather-app-two-rouge-17.vercel.app/)
+
+# Installation
+
+[(Back to top)](#table-of-contents)
+
+Para executar o projeto precisa ter o node instalado (versão utilizada foi a 22.14.0)
+
+```shell
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[(Back to top)](#table-of-contents)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- A funcionalidade de favoritar ficou de fora dessa versão por questão de tempo
+- No texto do teste tinha detalhado que deveria ser executado usando vite e nextjs, eu criei um arquivo mais simples apenas com nextjs
+- Os ícones foram utilizados com base no retorno da api openweathermap
+- A busca é feita após apertar no ícone de lupa ou apertando enter

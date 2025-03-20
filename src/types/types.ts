@@ -55,18 +55,6 @@ export interface WeatherData {
   cod: number
 }
 
-interface MainForecast {
-  temp: number
-  feels_like: number
-  temp_min: number
-  temp_max: number
-  pressure: number
-  sea_level: number
-  grnd_level: number
-  humidity: number
-  temp_kf: number
-}
-
 interface Weather {
   id: number
   main: string
@@ -88,19 +76,6 @@ interface Rain {
   '1h': number
 }
 
-interface Forecast {
-  dt: number
-  mainForecast: MainForecast
-  weather: Weather[]
-  clouds: Clouds
-  wind: Wind
-  visibility: number
-  pop: number
-  rain?: Rain
-  sys: Sys
-  dt_txt: string
-}
-
 interface Coord {
   lat: number
   lon: number
@@ -117,10 +92,35 @@ interface City {
   sunset: number
 }
 
-export interface WeatherDataCords {
+interface MainForecast {
+  temp: number
+  feels_like: number
+  temp_min: number
+  temp_max: number
+  pressure: number
+  sea_level: number
+  grnd_level: number
+  humidity: number
+  temp_kf: number
+}
+
+interface ForecastItem {
+  dt: number
+  main: MainForecast
+  weather: Weather[]
+  clouds: Clouds
+  wind: Wind
+  visibility: number
+  pop: number
+  rain?: Rain
+  sys: Sys
+  dt_txt: string
+}
+
+export interface ForecastResponse {
   cod: string
   message: number
   cnt: number
-  list: Forecast[]
+  list: ForecastItem[]
   city: City
 }

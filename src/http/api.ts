@@ -1,4 +1,4 @@
-import { WeatherData, WeatherDataCords } from '@/types/types'
+import { WeatherData, ForecastResponse } from '@/types/types'
 
 export async function getCityWeatherRequest(url: string): Promise<WeatherData> {
   const res = await fetch(url, {
@@ -11,15 +11,15 @@ export async function getCityWeatherRequest(url: string): Promise<WeatherData> {
   return data
 }
 
-export async function getCityWeatherCordsRequest(
+export async function getCityForecastRequest(
   url: string
-): Promise<WeatherDataCords> {
+): Promise<ForecastResponse> {
   const res = await fetch(url, {
     method: 'GET'
   })
 
   const body = [204, 205, 304].includes(res.status) ? null : await res.text()
-  const data: WeatherDataCords = body ? JSON.parse(body) : {}
+  const data: ForecastResponse = body ? JSON.parse(body) : {}
 
   return data
 }
