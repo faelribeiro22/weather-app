@@ -9,6 +9,7 @@ import {
   Tooltip,
   Legend
 } from 'chart.js'
+import { ForecastItem } from '@/types/types'
 
 ChartJS.register(
   CategoryScale,
@@ -21,7 +22,7 @@ ChartJS.register(
 )
 
 interface TemperatureChartProps {
-  data: any[]
+  data: ForecastItem[]
 }
 
 function TemperatureChart({ data }: TemperatureChartProps) {

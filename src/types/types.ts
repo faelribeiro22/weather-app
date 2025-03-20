@@ -104,7 +104,7 @@ interface MainForecast {
   temp_kf: number
 }
 
-interface ForecastItem {
+export interface ForecastItem {
   dt: number
   main: MainForecast
   weather: Weather[]

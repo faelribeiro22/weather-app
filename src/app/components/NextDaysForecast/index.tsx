@@ -1,17 +1,18 @@
+import { ForecastItem, ForecastResponse } from '@/types/types'
 import StatusWeather from '../StatusWeather'
 
 interface NextDaysForecastProps {
-  forecast: any
+  forecast: ForecastResponse
 }
 
-const NextDaysForecast: React.FC<NextDaysForecastProps> = ({ forecast }) => {
+function NextDaysForecast({ forecast }: NextDaysForecastProps) {
   const dailyData = forecast.list.filter(
-    (item: any, index: number) => index % 8 === 0
+    (item: ForecastItem, index: number) => index % 8 === 0
   )
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-      {dailyData.map((day: any, index: number) => (
+      {dailyData.map((day: ForecastItem, index: number) => (
         <div key={index} className="bg-gray-700 p-4 rounded-lg">
           <StatusWeather icon={day.weather[0].icon} />
           <p className="text-lg font-semibold">
